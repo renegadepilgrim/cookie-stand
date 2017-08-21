@@ -3,14 +3,41 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Alegreya', serif;*/
 @import url('https://fonts.googleapis.com/css?family=Alegreya|Raleway|Ubuntu');
+
 body {
   background-color: rgba(217, 217, 217, 1)
 }
-h1, h2 {
-  font-family: 'Raleyway', sans-serif;
+
+h2.headings {
+  font-family: 'Arial', sans-serif;
+  color: black;
+  text-decoration: underline;
 }
+
+h3.headings {
+  font-family: 'Arial', sans-serif;
+  color: black;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Raleyway', sans-serif;
+  color: rgba(53, 53, 53, 1);
+}
+
+h2 {
+  font-family: 'Raleyway', sans-serif;
+  color: rgba(60, 110, 113, 1);
+}
+
+h3 {
+  font-family: 'Raleyway', sans-serif;
+  color: rgba(40, 75, 99, 1);
+}
+
 .highlight {
   font-family: 'Raleway', sans-serif;
+  color: rgba(40, 75, 99, 1);
 }
 
 .data {
@@ -36,10 +63,10 @@ p.two {
 }
 
 p.three {
-  background-color: rgba(60, 110, 113, 1);
+  background-color: rgba(255, 255, 255, 1);
   width: 100px;
-  height: 50px;
-  border: 30px solid rgba(60, 110, 113, 1);
+  padding: 28px;
+  border: 2px solid;
 }
 
 p.four {

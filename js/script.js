@@ -34,7 +34,6 @@ var location1 = {
 location1.averageCookies()
 location1.writeResults()
 
-
 var location2 = {
   name: "Portland Airport",
   min: 6,
