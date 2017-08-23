@@ -7,6 +7,13 @@ var cookieShop = function (location, time, min, max, avg) {
   this.avgCookies = []
 }
 
+var location = [];
+var location1 = new CookieShop("Pioneer Square", 17, 88, 5.2);
+var location2 = new CookieShop("Portland Airport", 6, 44, 1.2);
+var location3 = new CookieShop("Washington Square", 11, 38, 1.9);
+var location4 = new CookieShop("Sellwood", 20, 48, 3.3);
+var location5 = new CookieShop("Pearl District", 3, 24, 2.6);
+
 this.getRandomInt = function() {
   return Math.floor(Math.random() * (this.max-this.min)) + this.min;
 }
@@ -33,6 +40,8 @@ this.writeResults = function(){
 
     this.location.averageCookies()
     this.location.writeResults()
+
+
 
 // var location1 = {
 //   name: "Pioneer Square",
