@@ -35,6 +35,11 @@ h3 {
   color: rgba(40, 75, 99, 1);
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 .highlight {
   font-family: 'Raleway', sans-serif;
   color: rgba(40, 75, 99, 1);
