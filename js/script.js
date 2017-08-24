@@ -1,47 +1,71 @@
-var cookieShop = function (location, time, min, max, avg) {
+var cookieShop = function(location, time, min, max, avg) {
   this.location = location;
   this.time = ['10a', '11a', '12p', '1p', '2p', '3p', '4p', '5p'];
   this.min = min;
   this.max = max;
   this.avg = avg;
-  this.avgCookies = []
-}
+  this.avgCookies = [];
+  this.getTableRowInfo = function() {
+  //  var row = document.createElement("tr");
+    // var locationCell = document.createElement("td");
+    // locationCell.innerText = this.location;
+    // row.appendChild(locationCell);
+    var timeCell = document.createElement("td");
+    timeCell.innerText = this.time;
+    row.appendChild(timeCell);
+    var avgCoookiesCell = document.createElement("td");
+    avgCookiesCell.innerText = this.avgCookies;
+    row.appendChild(avgCoookiesCell);
+    return row;
+  };
+};
 
-var location = [];
-var location1 = new CookieShop("Pioneer Square", 17, 88, 5.2);
-var location2 = new CookieShop("Portland Airport", 6, 44, 1.2);
-var location3 = new CookieShop("Washington Square", 11, 38, 1.9);
-var location4 = new CookieShop("Sellwood", 20, 48, 3.3);
-var location5 = new CookieShop("Pearl District", 3, 24, 2.6);
+var storeLocation = [];
+storeLocation.push= new cookieShop("Pioneer Square", 17, 88, 5.2);
+storeLocation.push = new cookieShop("Portland Airport", 6, 44, 1.2);
+storeLocation.push = new cookieShop("Washington Square", 11, 38, 1.9);
+storeLocation.push = new cookieShop("Sellwood", 20, 48, 3.3);
+storeLocation.push = new cookieShop("Pearl District", 3, 24, 2.6);
 
 this.getRandomInt = function() {
   return Math.floor(Math.random() * (this.max-this.min)) + this.min;
-}
+};
 
-this.random = function(){
+this.random = function() {
   return Math.floor(this.getRandomInt (this.min, this.max) * this.avg);
-}
+};
 
+this.avgCookies = [],
 this.averageCookies = function(){
   for (var index=0; index<this.location.time.length; index++) {
         this.location.avgCookies.push(this.location.random());
       }
     },
 
-this.writeResults = function(){
-        var total = 0;
-        document.getElementById('results').innerHTML += this.location.name + "<br>";
-        for (var index=0; index<this.location.time.length; index++) {
-          total += this.location.avgCookies[index];
-          document.getElementById('results').innerHTML += "<li>" + this.location.time[index] + ": " + this.location.avgCookies[index] + "</li>";
-        }
-        document.getElementById('results').innerHTML += "<li>Total:  " + total + "</li><br>";
+function buildResultsTable(){
+      var tableBody =
+      document.getElementById("results");
+      tableBody.innerHTML = "<tr><th></th><th></th></tr>";
+      for (var index = 0; index < results.length; index++) {
+      tableBody.appendChild(results[index].getTableRowInfo());
+      }
     };
 
-    this.location.averageCookies()
-    this.location.writeResults()
+buildResultsTable();
 
 
+// this.writeResults = function(){
+//   var total = 0;
+//   document.getElementById('results').innerHTML += this.location.name + "<br>";
+//     for (var index=0; index<this.location.time.length; index++) {
+//     total += this.location.avgCookies[index];
+//     document.getElementById('results').innerHTML += "<li>" + this.location.time[index] + ": " + this.location.avgCookies[index] + "</li>";
+//     }
+//     document.getElementById('results').innerHTML += "<li>Total:  " + total + "</li><br>";
+//     };
+
+    //this.location.averageCookies();
+    //this.location.writeResults();
 
 // var location1 = {
 //   name: "Pioneer Square",
