@@ -6,10 +6,10 @@ var cookieShop = function(location, time, min, max, avg) {
   this.avg = avg;
   this.avgCookies = [];
   this.getTableRowInfo = function() {
-  //  var row = document.createElement("tr");
-    // var locationCell = document.createElement("td");
-    // locationCell.innerText = this.location;
-    // row.appendChild(locationCell);
+    var row = document.createElement("tr");
+    var locationCell = document.createElement("td");
+    locationCell.innerText = this.location;
+    row.appendChild(locationCell);
     var timeCell = document.createElement("td");
     timeCell.innerText = this.time;
     row.appendChild(timeCell);
@@ -21,11 +21,11 @@ var cookieShop = function(location, time, min, max, avg) {
 };
 
 var storeLocation = [];
-storeLocation.push= new cookieShop("Pioneer Square", 17, 88, 5.2);
-storeLocation.push = new cookieShop("Portland Airport", 6, 44, 1.2);
-storeLocation.push = new cookieShop("Washington Square", 11, 38, 1.9);
-storeLocation.push = new cookieShop("Sellwood", 20, 48, 3.3);
-storeLocation.push = new cookieShop("Pearl District", 3, 24, 2.6);
+storeLocation.push(new cookieShop("Pioneer Square", 17, 88, 5.2));
+storeLocation.push(new cookieShop("Portland Airport", 6, 44, 1.2));
+storeLocation.push(new cookieShop("Washington Square", 11, 38, 1.9));
+storeLocation.push(new cookieShop("Sellwood", 20, 48, 3.3));
+storeLocation.push(new cookieShop("Pearl District", 3, 24, 2.6));
 
 this.getRandomInt = function() {
   return Math.floor(Math.random() * (this.max-this.min)) + this.min;
@@ -42,17 +42,16 @@ this.averageCookies = function(){
       }
     },
 
-function buildResultsTable(){
-      var tableBody =
-      document.getElementById("results");
-      tableBody.innerHTML = "<tr><th></th><th></th></tr>";
-      for (var index = 0; index < results.length; index++) {
-      tableBody.appendChild(results[index].getTableRowInfo());
-      }
-    };
+buildResultsTable = function(){
+  var tableBody =
+  document.getElementById("results");
+  tableBody.innerHTML = "<tr><th></th><th></th></tr>";
+  for (var index = 0; index < storeLocation.length; index++) {
+  tableBody.appendChild(results[index].getTableRowInfo());
+    }
+  };
 
 buildResultsTable();
-
 
 // this.writeResults = function(){
 //   var total = 0;
