@@ -35,10 +35,12 @@ h3 {
   color: rgba(40, 75, 99, 1);
 }
 
-/*table, th, td {
+table, th, td {
+  font-family: 'Ubuntu', sans-serif;
   border: 1px solid black;
   border-collapse: collapse;
-}*/
+  padding: 10px;
+}
 
 .highlight {
   font-family: 'Raleway', sans-serif;
