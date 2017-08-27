@@ -72,4 +72,5 @@ var tableBody =
       storeLocation.push(newStore);
       newStore.averageCookies();
       tableBody.appendChild(newStore.getTableRowInfo());
+      form.reset();
     }
