@@ -4,7 +4,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
-    <h1>Pat's Cookie Store</h1>
+    <!-- <img src="img/salmon.png" class="salmon" alt="Salmon"/> -->
+    <h1>Pat's Salmon Cookie Store</h1>
     <h2>Store Information</h2>
     <table>
       <thead>
@@ -21,7 +22,6 @@
           <th>Total</th>
         </tr>
       </thead>
-
       <tbody id="results">
       <tr>
         <th></th>
@@ -29,6 +29,15 @@
       </tr>
       </tbody>
     </table>
+    <form name="newCookieShopForm">
+      <label>Store Name</label>
+      <input name="cookieShopName"><br>
+      <label>Minimum Customers Per Hour</label>
+      <input name="minCustomers"><br>
+      <label>Maximum Customers Per Hour</label>
+      <input name="maxCustomers"><br>
+      <input type="button" value="Show Form Contents" onclick="showData()">
+    </form>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

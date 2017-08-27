@@ -55,3 +55,16 @@ var tableBody =
   storeLocation[index].averageCookies();
   tableBody.appendChild(storeLocation[index].getTableRowInfo());
     }
+
+//Input form for new stores and numbers
+    function showData() {
+      var form = document.forms['newCookieShopForm'];
+      var newLocation = form.elements['cookieShopName'];
+      var minCustomers = form.elements['minCustomers'];
+      var maxCustomers = form.elements['maxCustomers'];
+      var message = "New Store: ";
+      message += "\n Name:  "+newLocation.value;
+      message += "\n Min: "+minCustomers.value;
+      message += "\n Max: "+maxCustomers.value;
+      alert(message);
+    }
